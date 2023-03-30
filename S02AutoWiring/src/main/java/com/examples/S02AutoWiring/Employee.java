@@ -7,7 +7,16 @@ public class Employee {
 
 	private int id;
 	private String name;
-	private Address address;
+
+	@Autowired
+	@Qualifier("address2")
+	private Address homeaddress;
+	
+
+	@Autowired
+	@Qualifier("address2")
+	private Address officeaddress;
+
 	
 	public int getId() {
 		return id;
@@ -20,17 +29,10 @@ public class Employee {
 	}
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + ", address=" + address + "]";
+		return "Employee [id=" + id + ", name=" + name + ", homeaddress=" + homeaddress +  ", officeaddress=" + officeaddress +"]";
 	}
 	public void setName(String name) {
 		this.name = name;
 	}
-	public Address getAddress() {
-		return address;
-	}
-	@Autowired
-	@Qualifier("address2")
-	public void setAddress(Address address) {
-		this.address = address;
-	}
+	
 }
