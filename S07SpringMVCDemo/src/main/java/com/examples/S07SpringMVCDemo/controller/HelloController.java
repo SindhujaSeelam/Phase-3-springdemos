@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.examples.S07SpringMVCDemo.model.Employee;
@@ -68,6 +69,17 @@ public class HelloController {
 		modelView.addObject("employees",emps);
 		
 		modelView.setViewName("employees");
+		return modelView;
+}
+	
+	@RequestMapping("/showdata")
+	public ModelAndView showdata(@RequestParam("id")int id,@RequestParam("name")String name) {
+		
+		ModelAndView modelView=new ModelAndView();
+		
+		modelView.addObject("id",id);
+		modelView.addObject("name",name);
+		modelView.setViewName("showdata");
 		return modelView;
 }
 }
