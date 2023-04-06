@@ -1,0 +1,6 @@
+use mydb;
+ 
+ drop table product2;
+ 
+ 
+create table product2(id int AUTO_INCREMENT PRIMARY KEY, name varchar(20), description varchar(50), price int);
