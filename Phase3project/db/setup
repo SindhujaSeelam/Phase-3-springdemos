@@ -1,0 +1,17 @@
+create database sportyshoe;
+
+use sportyshoe;
+
+create table user(id int primary key auto_increment,name varchar(50),email varchar(50) unique,password varchar(50));
+
+create table product(id int primary key auto_increment,category varchar(50),price int,brandname varchar(50),color varchar(50),materialtype varchar(50));
+
+create table userproduct(uid int,pid int);
+
+create table purchase(id int primary key auto_increment,name varchar(40),email varchar(40),category varchar(50),price int,date varchar(40));
+
+create table admin(username varchar(40),password varchar(40));
+
+insert into admin values("Sindhuja","1234");
+
+insert into user(name,email,password)values("chaitu","chait@gmail.com",13422);

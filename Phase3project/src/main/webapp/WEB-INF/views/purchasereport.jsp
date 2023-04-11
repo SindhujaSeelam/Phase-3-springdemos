@@ -12,9 +12,9 @@ Category :
 <option value="Sport">Sport</option>
 <option value="Loafers">Loafers</option>
 </select>
-Date:<input name="date"type="text"/>
+Date:<input name="date"type="text"/>Note:Enter in the format YYYY/MM/DD
 <input type="submit" value="categorize"/><br>
-${msg}<br>
+${msg}
 <c:if test="${values==true}"> 
 <table>
 <tr>
@@ -27,11 +27,11 @@ ${msg}<br>
 <c:forEach items="${purchase}" var="purchase">
 <tr>
 
-<td>${purchase.name}<br>
+<td>${purchase.name}</td>
 <td>${purchase.email}</td>
-<td>${purchase.category}</td><br>
-<td>${purchase.price}</td><br>
-<td>${purchase.date}</td><br>
+<td>${purchase.category}</td>
+<td>${purchase.price}</td>
+<td>${purchase.date}</td>
 </tr>
 </c:forEach>
 </table>
